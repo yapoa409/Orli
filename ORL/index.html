@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Orli sac à main</title>
+<style>
+  :root {
+    --bordeaux: #6D0F24;
+    --bordeaux-fonce: #4A0A18;
+    --blanc: #FFFFFF;
+    --rose-pale: #F8EEF0;
+    --texte: #2A1A1E;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: Georgia, "Times New Roman", serif; color: var(--texte); background: var(--blanc); line-height: 1.6; }
+  a { color: inherit; text-decoration: none; }
+  a:focus-visible, button:focus-visible { outline: 3px solid var(--bordeaux); outline-offset: 3px; }
+
+  header { background: var(--bordeaux); color: var(--blanc); display: flex; align-items: center; justify-content: space-between; padding: 14px 6%; flex-wrap: wrap; gap: 10px; }
+  .logo { display: flex; align-items: center; gap: 12px; }
+  .logo svg { width: 48px; height: 48px; }
+  .logo span { font-size: 1.5rem; letter-spacing: 1px; }
+  nav a { margin-left: 22px; font-size: 1rem; }
+  nav a:hover { text-decoration: underline; }
+
+  .hero { background: var(--rose-pale); text-align: center; padding: 80px 6%; }
+  .hero h1 { font-size: clamp(2rem, 5vw, 3.4rem); color: var(--bordeaux); font-weight: normal; }
+  .hero p { max-width: 560px; margin: 16px auto 28px; font-size: 1.1rem; }
+  .btn { display: inline-block; background: var(--bordeaux); color: var(--blanc); padding: 13px 34px; border-radius: 40px; }
+  .btn:hover { background: var(--bordeaux-fonce); }
+
+  section { padding: 70px 6%; }
+  h2 { text-align: center; color: var(--bordeaux); font-weight: normal; font-size: 2rem; margin-bottom: 40px; }
+
+  .grille { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 28px; max-width: 1100px; margin: 0 auto; }
+  .carte { border: 1px solid var(--bordeaux); border-radius: 6px; overflow: hidden; background: var(--blanc); }
+  .carte .visuel { background: var(--rose-pale); }
+  .carte img { width: 100%; height: 240px; object-fit: cover; display: block; background: var(--blanc); }
+  .carte .infos { padding: 18px; text-align: center; border-top: 1px solid var(--bordeaux); }
+  .carte h3 { font-weight: normal; font-size: 1.15rem; }
+  .prix { color: var(--bordeaux); font-size: 1.3rem; margin-top: 6px; }
+
+  .apropos { background: var(--bordeaux); color: var(--blanc); text-align: center; }
+  .apropos h2 { color: var(--blanc); }
+  .apropos p { max-width: 640px; margin: 0 auto; }
+
+  footer { background: var(--bordeaux-fonce); color: var(--blanc); padding: 50px 6% 20px; }
+  .pied { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 30px; max-width: 1100px; margin: 0 auto; }
+  footer h4 { font-weight: normal; font-size: 1.2rem; margin-bottom: 10px; }
+  footer p { font-size: .95rem; }
+  .copy { text-align: center; margin-top: 36px; padding-top: 16px; border-top: 1px solid rgba(255,255,255,.25); font-size: .85rem; }
+</style>
+</head>
+<body>
+
+<header>
+  <a href="#haut" class="logo" aria-label="Orli sac à main">
+    <!-- LOGO : sac stylisé -->
+    <svg viewBox="0 0 64 64" aria-hidden="true">
+      <circle cx="32" cy="32" r="30" fill="#FFFFFF"/>
+      <path d="M22 28 C22 14 42 14 42 28" fill="none" stroke="#6D0F24" stroke-width="3.5" stroke-linecap="round"/>
+      <rect x="14" y="27" width="36" height="24" rx="5" fill="#6D0F24"/>
+      <circle cx="32" cy="38" r="3" fill="#FFFFFF"/>
+    </svg>
+    <span>Orli sac à main</span>
+  </a>
+  <nav>
+    <a href="#collection">Collection</a>
+    <a href="#apropos">À propos</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<main id="haut">
+  <div class="hero">
+    <h1>Le sac qui vous ressemble</h1>
+    <p>Orli sac à main vous propose des sacs élégants, solides et abordables pour chaque jour.</p>
+    <a href="#collection" class="btn">Voir la collection</a>
+  </div>
+
+  <section id="collection">
+    <h2>Notre collection</h2>
+    <div class="grille">
+
+      <!-- Image 1 : remplace images/sac1.jpeg par ta photo -->
+      <article class="carte">
+        <div class="visuel">
+          <img src="sac1.jpg" alt="Sac cabas bordeaux" onerror="this.onerror=null;this.src='sac1'">
+        </div>
+        <div class="infos"><h3>Sac Cabas</h3><p class="prix">5 000 FCFA</p></div>
+      </article>
+
+      <!-- Image 2 : remplace images/sac2.jpeg par ta photo -->
+      <article class="carte">
+        <div class="visuel">
+          <img src="sac77.jpg" alt="Sac bandoulière blanc" onerror="this.onerror=null;this.src='images/sac2.svg'">
+        </div>
+        <div class="infos"><h3>Sac Bandoulière</h3><p class="prix">5 000 FCFA</p></div>
+      </article>
+
+      <!-- Image 3 : remplace images/sac3.jpeg par ta photo -->
+      <article class="carte">
+        <div class="visuel">
+          <img src="sac00.webp" alt="Pochette bordeaux" onerror="this.onerror=null;this.src='images/sac3.svg'">
+        </div>
+        <div class="infos"><h3>Pochette</h3><p class="prix">3 000 FCFA</p></div>
+      </article>
+
+      <!-- Image 4 : remplace images/sac4.jpeg par ta photo -->
+      <article class="carte">
+        <div class="visuel">
+          <img src="SAC.webp" alt="Mini sac blanc et bordeaux" onerror="this.onerror=null;this.src='images/sac4.svg'">
+        </div>
+        <div class="infos"><h3>Mini Sac</h3><p class="prix">3 000 FCFA</p></div>
+      </article>
+
+    </div>
+  </section>
+
+  <section id="apropos" class="apropos">
+    <h2>À propos d'Orli</h2>
+    <p>Chez Orli sac à main, nous choisissons des modèles pratiques et soignés à des prix accessibles : 5 000 FCFA pour les grands sacs, 3 000 FCFA pour les petits modèles.</p>
+  </section>
+</main>
+
+<footer id="contact">
+  <div class="pied">
+    <div>
+      <h4>Orli sac à main</h4>
+      <p>Sacs à main pour toutes les occasions.</p>
+    </div>
+    <div>
+      <h4>Prix</h4>
+      <p>Cabas et Bandoulière : 5 000 FCFA</p>
+      <p>Pochette et Mini Sac : 3 000 FCFA</p>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <p>Abidjan, Côte d'Ivoire</p>
+      <p>Téléphone : +225 00 00 00 00 00</p>
+      <p>Email : contact@orli.com</p>
+    </div>
+  </div>
+  <p class="copy">© 2026 Orli sac à main. Tous droits réservés.</p>
+</footer>
+
+</body>
+</html>
